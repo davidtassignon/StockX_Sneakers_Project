@@ -49,7 +49,10 @@ Before continuing with the EDA and corresponding visualizations I subsetted the 
 
 The following section will visualize some variables to give you an understanding of the data that was used for this project. For a closer look into the code used and other variables I direct you to the "code_notebook.ipynb" section 3.
 ### Brand
-![Screen Shot 2020-12-21 at 11 39 07](https://user-images.githubusercontent.com/70702631/102768252-27a68a00-4381-11eb-919d-42e825905d1d.png)
+<details>
+    <summary>Visual</summary>
+    <![Screen Shot 2020-12-21 at 11 39 07](https://user-images.githubusercontent.com/70702631/102768252-27a68a00-4381-11eb-919d-42e825905d1d.png)>
+</details>
 
 ### ROI per Sneaker name and Type
 ![Screen Shot 2020-12-21 at 11 37 30](https://user-images.githubusercontent.com/70702631/102768134-ef06b080-4380-11eb-8363-97e9b07228a3.png)
@@ -66,3 +69,32 @@ The following section will visualize some variables to give you an understanding
 
 ### Size
 ![Screen Shot 2020-12-21 at 11 59 47](https://user-images.githubusercontent.com/70702631/102770208-098e5900-4384-11eb-8840-7f41e5bfb6a9.png)
+
+## Modelling the Data
+### Preparation
+Before applying some models, I prepared the data in the following way. The variables that were used for the modelling were: 
+```powershell
+target_variable = 'ROI'
+categorical_variables = ['brand', 'shoe_size', 'style_id','make', 'day', 'month', 'week']
+continous_variable = ['day_since_release_2']
+```
+Hereafter I did the following:
+1. Initialized the target- and predictor variables
+2. Dummified the categorical variables
+3. Setted up a Train-Test split with random state 34
+
+### Modelling
+I fitted the following linear and tree-based models using a cross-validation of 5 resulting in the R2 scores shown in the tables below.
+## Linear-based Models
+Model                  | Train Score     | Test Score        | R2 Score          | MSE               | RMSE            
+--------------------   | -------------   | -------------     | -------------     | -------------     | -------------     
+Lasso Regressor *      | 82.87%          | 81.17%            | 82.76%            | 5142.35           | 71.71        
+Linear SVM Regressor * | 82.87%          | 81.17%            | 82.76%            | 5142.35           | 71.71        
+###### * Hyperparameters tuned by GridSearch
+
+## Tree-based Models
+Model                  | Train Score     | Test Score        | R2 Score          | MSE               | RMSE            
+--------------------   | -------------   | -------------     | -------------     | -------------     | -------------     
+Random Forest Regressor| 99.58%          | 96.74%            | 97.45%            | 891.04            | 29.85        
+HistGradientBoosting   | 95.83%          | 94.59%            | 95.05%            | 1478.60           | 38.45      
+MLPRegressor           | 97.52%          | 96.36%            | 96.67%            | 995.34            | 31.55  
