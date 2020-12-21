@@ -83,7 +83,6 @@ The following section will visualize some variables to give you an understanding
 </details>
 
 ### Size
-![Screen Shot 2020-12-21 at 11 59 47](https://user-images.githubusercontent.com/70702631/102770208-098e5900-4384-11eb-8840-7f41e5bfb6a9.png)
 <details>
 <summary>Visual</summary>
 <img width="600" alt="Screen Shot 2020-12-21 at 11 59 47" src="https://user-images.githubusercontent.com/70702631/102770208-098e5900-4384-11eb-8840-7f41e5bfb6a9.png">
