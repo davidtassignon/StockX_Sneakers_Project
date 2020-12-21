@@ -13,12 +13,12 @@ For this project I used a dataset that StockX (see CSV_files/StockX-Data-Contest
 So for each day the Off-White Jordan 1 was on the market, they randomly selected X% of its sale from each day. 
 Table 1 shows which variables were in the dataset.
 
-![Screen Shot 2020-12-21 at 10 47 09](https://user-images.githubusercontent.com/70702631/102763476-ff675d00-4379-11eb-8e18-9722c5043a83.png)
+![Screen Shot 2020-12-21 at 10 47 09](https://user-images.githubusercontent.com/70702631/102763476-ff675d00-4379-11eb-8e18-9722c5043a83.png)/
 
-Table 1: Variables in public StockX Dataset
+###### Table 1: Variables in public StockX Dataset
 
 ### StockX Unofficial API
-To get some extra information per sneaker name I decided to use an unofficial StockX API. As shown below, I iterated over each sneaker name that I had in my initial dataset returning me 37 extra variables. After closely investigating each variable, I decided to keep the variables in the table below.
+To get some extra information per sneaker name I decided to use an unofficial StockX API. As shown below, I iterated over each sneaker name that I had in my initial dataset returning me 37 extra variables. After closely investigating each variable, I decided to keep the variables shown in Table 2.
 ```powershell
 from stockxsdk import Stockx
 stockx_ = Stockx()
@@ -28,9 +28,9 @@ for sneakername in sneakernames:
     large_sneaker_dict[sneakername] = stockx_.search(sneakername)
 ```
 
-![Screen Shot 2020-12-21 at 10 56 29](https://user-images.githubusercontent.com/70702631/102764457-73eecb80-437b-11eb-9925-524a30f9468b.png)
+![Screen Shot 2020-12-21 at 10 56 29](https://user-images.githubusercontent.com/70702631/102764457-73eecb80-437b-11eb-9925-524a30f9468b.png)/
 
-Table 2: Usefull variables for StockX API 
+###### Table 2: Usefull variables for StockX API 
 
 ### Exploratory Data Analysis
 
