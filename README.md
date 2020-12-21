@@ -28,7 +28,7 @@ for sneakername in sneakernames:
     large_sneaker_dict[sneakername] = stockx_.search(sneakername)
 ```
 
-![Screen Shot 2020-12-21 at 10 56 29](https://user-images.githubusercontent.com/70702631/102764457-73eecb80-437b-11eb-9925-524a30f9468b.png)
+![Screen Shot 2020-12-21 at 11 22 45](https://user-images.githubusercontent.com/70702631/102766737-e57c4900-437e-11eb-9241-d89fe1ff93a9.png)
 
 ###### Table 2: Usefull variables for StockX API 
 
@@ -37,11 +37,16 @@ After merging the two dataframe together, I decided to do some extra feature eng
 * ROI: the target variable calculated as the difference between the sale and retail price divided by the retail price expressed as a percentage.
 * Day since Release Date: a continuous variable which represents the number of days the order is made before or after the release date.
 * Within 1 year: a binary variable which represent whether the order is made within 1 year from the release date.
-* Month, Week, Day: some extra seasonal variables extracted from the order date
-* Colorway: this variable from the api was used to extract the single colors per sneaker resulting in a variable per color
+* Month, Week, Day: some extra seasonal variables extracted from the order date.
+* Colorway: this variable from the api was used to extract the single colors per sneaker resulting in a variable per color.
 * Day since Release Date_2: the same variable as "Day since Release Date" but shifted with +29 days to be able to take this time dependence into account in the modelling stage. 
 
+On top of the variables I already had, this feature engineering gave me a total of 125 variables. 
 For a closer look into the code used to perform this feature engineering I would like to direct you to the "code_notebook.ipynb" section 2.4.
 
 ### Exploratory Data Analysis
+Before continuing with the EDA and corresponding visualizations I subsetted the dataset to all the sales within 1 year. 
 
+The following section will visualize some variables to give you an understanding of the data that was used for this project. For a closer look into the code used and other variables I direct you to the "code_notebook.ipynb" section 3.
+## ROI
+![Screen Shot 2020-12-21 at 11 37 30](https://user-images.githubusercontent.com/70702631/102768134-ef06b080-4380-11eb-8363-97e9b07228a3.png)
