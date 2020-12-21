@@ -13,7 +13,7 @@ For this project I used a dataset that StockX (see CSV_files/StockX-Data-Contest
 So for each day the Off-White Jordan 1 was on the market, they randomly selected X% of its sale from each day. 
 Table 1 shows which variables were in the dataset.
 
-![Screen Shot 2020-12-21 at 10 47 09](https://user-images.githubusercontent.com/70702631/102763476-ff675d00-4379-11eb-8e18-9722c5043a83.png)/
+![Screen Shot 2020-12-21 at 10 47 09](https://user-images.githubusercontent.com/70702631/102763476-ff675d00-4379-11eb-8e18-9722c5043a83.png)
 
 ###### Table 1: Variables in public StockX Dataset
 
@@ -28,9 +28,20 @@ for sneakername in sneakernames:
     large_sneaker_dict[sneakername] = stockx_.search(sneakername)
 ```
 
-![Screen Shot 2020-12-21 at 10 56 29](https://user-images.githubusercontent.com/70702631/102764457-73eecb80-437b-11eb-9925-524a30f9468b.png)/
+![Screen Shot 2020-12-21 at 10 56 29](https://user-images.githubusercontent.com/70702631/102764457-73eecb80-437b-11eb-9925-524a30f9468b.png)
 
 ###### Table 2: Usefull variables for StockX API 
+
+### Feature Engineering
+After merging the two dataframe together, I decided to do some extra feature engineering. I created the following variables:
+* ROI: the target variable calculated as the difference between the sale and retail price divided by the retail price expressed as a percentage.
+* Day since Release Date: a continuous variable which represents the number of days the order is made before or after the release date.
+* Within 1 year: a binary variable which represent whether the order is made within 1 year from the release date.
+* Month, Week, Day: some extra seasonal variables extracted from the order date
+* Colorway: this variable from the api was used to extract the single colors per sneaker resulting in a variable per color
+* Day since Release Date_2: the same variable as "Day since Release Date" but shifted with +29 days to be able to take this time dependence into account in the modelling stage. 
+
+For a closer look into the code used to perform this feature engineering I would like to direct you to the "code_notebook.ipynb" section 2.4.
 
 ### Exploratory Data Analysis
 
