@@ -12,12 +12,18 @@ The beautifull ting about this new marketplace is that all kind of people can no
 For this project I used a dataset that StockX published as a Challenge where people could win 1000 dollar. The data that was given consisted of a random sample of all Off-White x Nike and Yeezy 350 sales between 9/1/2017 and 13/02/2019. In total there were 99956 deals, 27,794 Off-White, and 72,162 Yeezy. To create this sample, they took a random, fixed percentage X of deals on StockX for each colorway, on each day since September 2017.
 So for each day the Off-White Jordan 1 was on the market, they randomly selected X% of its sale from each day. 
 The following variable were given in the dataset: 
-[
-![Screen Shot 2020-12-21 at 10 40 31](https://user-images.githubusercontent.com/70702631/102762765-0346af80-4379-11eb-9353-859d795c5ee1.png)
-](url)
+![Screen Shot 2020-12-21 at 10 47 09](https://user-images.githubusercontent.com/70702631/102763476-ff675d00-4379-11eb-8e18-9722c5043a83.png)
 
 ### StockX Unofficial API
 To get some extra information per sneaker name I decided to use an unofficial StockX API. I iterated over each sneaker name that I had in my initial dataset returning me 37 extra variables. Some duplicate variables but after investigating I kept the following 4 variables. 
+```powershell
+from stockxsdk import Stockx
+stockx_ = Stockx()
+
+large_sneaker_dict = {}
+for sneakername in sneakernames:
+    large_sneaker_dict[sneakername] = stockx_.search(sneakername)
+```
 
 ### Exploratory Data Analysis
 
