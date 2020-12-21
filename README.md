@@ -1,13 +1,23 @@
 # Predicting the ROI of Sneakers on StockX.com
 My first Data Science Project where I used the sneaker data set of StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers.
 
+## Table of Content
+
+1. [Background and Research Goal](#Background-and-Research-Goal)
+2. [Data Overview](#Data-Overview)
+3. [Exploratory Data Analysis](#Exploratory-Data-Analysis)
+4. [Modelling the Data](#Modelling-the-Data)
+5. [Model Results](#Model-Results)
+6. [Limitations and Further Deployment](#Limitations-and-Further-Deployment)
+
+
 ## Background and Research Goal
 Over the past 10 years flipping shoes (buying new sneakers and reselling the sneakers) is evolved to what is now the sneaker culture. You can think flipping sneakers for profit is silly, but this once niche market has grown to become a 2 billion market and it is projected to reach 6 billion by 2025.
 One of the largest sneaker resale platforms is called StockX. It operates like a stock exchange website where users can place a bidding or asking prices, and when there is a match, the deal can come through. As you can imagine, this online marketplace is a Walhalla for data scientists or analysts as each day 7000 to 10000 deals are made.
 
 The beautifull ting about this new marketplace is that all kind of people can now access a limited pair of sneakers. So this means that all kind of people can also participate on the StockX marketplace and make profit on reselling sneakers. The aim of my project was to identify which features boost the resale price of a pair of sneakers and give you as reseller the highest return on investment.   
 
-## Project Overview
+## Data Overview
 ### StockX Dataset
 For this project I used a dataset that StockX (see CSV_files/StockX-Data-Contest-2019.xlsx) published as a Challenge where people could win 1000 dollar. The data that was given consisted of a random sample of all Off-White x Nike and Yeezy 350 sales between 9/1/2017 and 13/02/2019. In total there were 99956 deals, 27,794 Off-White, and 72,162 Yeezy. To create this sample, they took a random, fixed percentage X of deals on StockX for each colorway, on each day since September 2017.
 So for each day the Off-White Jordan 1 was on the market, they randomly selected X% of its sale from each day. 
@@ -50,41 +60,41 @@ Before continuing with the EDA and corresponding visualizations I subsetted the 
 The following section will visualize some variables to give you an understanding of the data that was used for this project. For a closer look into the code used and other variables I direct you to the "code_notebook.ipynb" section 3.
 ### Brand
 <details>
-<summary>Visual</summary>
+<summary>Figure 1</summary>
 <img width="300" alt="Screen Shot 2020-12-21 at 11 39 07" src="https://user-images.githubusercontent.com/70702631/102768252-27a68a00-4381-11eb-919d-42e825905d1d.png">
 </details>
 
 ### ROI per Sneaker name and Type
 <details>
-<summary>Visual1</summary>
+<summary>Figure 2</summary>
 <img width="879" alt="Screen Shot 2020-12-21 at 11 37 30" src="https://user-images.githubusercontent.com/70702631/102782405-94c61980-4399-11eb-95b3-3ee5dba7caa3.png">
 </details>
 
 <details>
-<summary>Visual2</summary>
+<summary>Figure 3</summary>
 <img width="879" alt="Screen Shot 2020-12-21 at 11 43 27" src="https://user-images.githubusercontent.com/70702631/102768642-c7fcae80-4381-11eb-96c8-333f374d88ab.png">
 </details>
 
 ### ROI over Time
 <details>
-<summary>Visual1</summary>
+<summary>Figure 4</summary>
 <img width="500" alt="Screen Shot 2020-12-21 at 11 56 00" src="https://user-images.githubusercontent.com/70702631/102769850-810fb880-4383-11eb-9477-e541611a0d88.png">
 </details>
 
 <details>
-<summary>Visual2</summary>
+<summary>Figure 5</summary>
 <img width="879" alt="Screen Shot 2020-12-21 at 11 46 37" src="https://user-images.githubusercontent.com/70702631/102768922-32adea00-4382-11eb-9dcf-3a7bf9baa788.png">
 </details>
 
 ### Daily, Weekly, Monthly difference of ROI
 <details>
-<summary>Visual</summary>
+<summary>Figure 6</summary>
 <img width="600" alt="Screen Shot 2020-12-21 at 11 52 23" src="https://user-images.githubusercontent.com/70702631/102769497-0181e980-4383-11eb-91c2-f343aa1ec68b.png">
 </details>
 
 ### Size
 <details>
-<summary>Visual</summary>
+<summary>Figure 7</summary>
 <img width="600" alt="Screen Shot 2020-12-21 at 11 59 47" src="https://user-images.githubusercontent.com/70702631/102770208-098e5900-4384-11eb-8840-7f41e5bfb6a9.png">
 </details>
 
@@ -119,7 +129,7 @@ MLPRegressor           | 97.52%          | 96.36%            | 96.67%           
 
 According to the modeling results, the Random Forest Regressor preforms best as it has the highest cross-validated accuracy (R2 score) and lowest values for the MSE and RMSE. For the deployment of the model into some sort of web application which could be used by people, the Random Forest Regressor would be prefered. The next section will however also show the results of the Lasso Regressor as they are easier to interpret. 
 
-## Model Predictions
+## Model Results
 ### Lasso Regressor
 The variables with the highest coefficients are visualized below. For convenience, I also decided to visualize the coefficients per variable to make it easier to interpret.
 
@@ -127,8 +137,6 @@ The variables with the highest coefficients are visualized below. For convenienc
 <summary>Variables with Highest Coefficients</summary>
 <img width="600" alt="Screen Shot 2020-12-21 at 14 46 28" src="https://user-images.githubusercontent.com/70702631/102783562-65181100-439b-11eb-93e3-92ee39b001eb.png">
 </details>
-
-TEXT
 
 <details>
 <summary>Type of Sneaker</summary>
@@ -181,3 +189,5 @@ TEXT
 * Proposing candidate based on hot features, I'm not able to give a predicted ROI.
 ### Further Deployment
 * There is an idea of implementing the Random Forest Regressor model in some sort of user-friendly web application for people to use. Nevertheless, this is something I still need to explore.
+
+Thank you for reading this readme, feel free to reach out if you have any questions.
