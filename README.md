@@ -44,9 +44,25 @@ After merging the two dataframe together, I decided to do some extra feature eng
 On top of the variables I already had, this feature engineering gave me a total of 125 variables. 
 For a closer look into the code used to perform this feature engineering I would like to direct you to the "code_notebook.ipynb" section 2.4.
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 Before continuing with the EDA and corresponding visualizations I subsetted the dataset to all the sales within 1 year. 
 
 The following section will visualize some variables to give you an understanding of the data that was used for this project. For a closer look into the code used and other variables I direct you to the "code_notebook.ipynb" section 3.
-## ROI
+### Brand
+![Screen Shot 2020-12-21 at 11 39 07](https://user-images.githubusercontent.com/70702631/102768252-27a68a00-4381-11eb-919d-42e825905d1d.png)
+
+### ROI per Sneaker name and Type
 ![Screen Shot 2020-12-21 at 11 37 30](https://user-images.githubusercontent.com/70702631/102768134-ef06b080-4380-11eb-8363-97e9b07228a3.png)
+
+<img width="879" alt="Screen Shot 2020-12-21 at 11 43 27" src="https://user-images.githubusercontent.com/70702631/102768642-c7fcae80-4381-11eb-96c8-333f374d88ab.png">
+
+### ROI over Time
+![Screen Shot 2020-12-21 at 11 56 00](https://user-images.githubusercontent.com/70702631/102769850-810fb880-4383-11eb-9477-e541611a0d88.png)
+
+<img width="870" alt="Screen Shot 2020-12-21 at 11 46 37" src="https://user-images.githubusercontent.com/70702631/102768922-32adea00-4382-11eb-9dcf-3a7bf9baa788.png">
+
+### Dayly, Weekly, Monthly difference of ROI
+![Screen Shot 2020-12-21 at 11 52 23](https://user-images.githubusercontent.com/70702631/102769497-0181e980-4383-11eb-91c2-f343aa1ec68b.png)
+
+### Size
+![Screen Shot 2020-12-21 at 11 57 33](https://user-images.githubusercontent.com/70702631/102770059-cc29cb80-4383-11eb-8c65-1d46b7c34d33.png)
