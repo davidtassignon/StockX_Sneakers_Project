@@ -1,5 +1,5 @@
 # Predicting the ROI of Sneakers on StockX.com
-A Data Science Project where I used the sneaker data set of StockX is combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers.
+A Data Science Project where I used the sneaker data set of StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers.
 
 ## Background and Research Goal
 Over the past 10 years flipping shoes (buying new sneakers and reselling the sneakers) is evolved to what is now the sneaker culture. You can think flipping sneakers for profit is silly, but this once niche market has grown to become a 2 billion market and it is projected to reach 6 billion by 2025.
