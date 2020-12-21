@@ -50,25 +50,44 @@ Before continuing with the EDA and corresponding visualizations I subsetted the 
 The following section will visualize some variables to give you an understanding of the data that was used for this project. For a closer look into the code used and other variables I direct you to the "code_notebook.ipynb" section 3.
 ### Brand
 <details>
-    <summary>Visual</summary>
-    <![Screen Shot 2020-12-21 at 11 39 07](https://user-images.githubusercontent.com/70702631/102768252-27a68a00-4381-11eb-919d-42e825905d1d.png)>
+<summary>Visual</summary>
+<img width="300" alt="Screen Shot 2020-12-21 at 11 39 07" src="https://user-images.githubusercontent.com/70702631/102768252-27a68a00-4381-11eb-919d-42e825905d1d.png">
 </details>
 
 ### ROI per Sneaker name and Type
-![Screen Shot 2020-12-21 at 11 37 30](https://user-images.githubusercontent.com/70702631/102768134-ef06b080-4380-11eb-8363-97e9b07228a3.png)
+<details>
+<summary>Visual1</summary>
+<img width="879" alt="Screen Shot 2020-12-21 at 11 37 30" src="https://user-images.githubusercontent.com/70702631/102782405-94c61980-4399-11eb-95b3-3ee5dba7caa3.png">
+</details>
 
+<details>
+<summary>Visual2</summary>
 <img width="879" alt="Screen Shot 2020-12-21 at 11 43 27" src="https://user-images.githubusercontent.com/70702631/102768642-c7fcae80-4381-11eb-96c8-333f374d88ab.png">
+</details>
 
 ### ROI over Time
-![Screen Shot 2020-12-21 at 11 56 00](https://user-images.githubusercontent.com/70702631/102769850-810fb880-4383-11eb-9477-e541611a0d88.png)
+<details>
+<summary>Visual1</summary>
+<img width="500" alt="Screen Shot 2020-12-21 at 11 56 00" src="https://user-images.githubusercontent.com/70702631/102769850-810fb880-4383-11eb-9477-e541611a0d88.png">
+</details>
 
-<img width="870" alt="Screen Shot 2020-12-21 at 11 46 37" src="https://user-images.githubusercontent.com/70702631/102768922-32adea00-4382-11eb-9dcf-3a7bf9baa788.png">
+<details>
+<summary>Visual2</summary>
+<img width="879" alt="Screen Shot 2020-12-21 at 11 46 37" src="https://user-images.githubusercontent.com/70702631/102768922-32adea00-4382-11eb-9dcf-3a7bf9baa788.png">
+</details>
 
-### Dayly, Weekly, Monthly difference of ROI
-![Screen Shot 2020-12-21 at 11 52 23](https://user-images.githubusercontent.com/70702631/102769497-0181e980-4383-11eb-91c2-f343aa1ec68b.png)
+### Daily, Weekly, Monthly difference of ROI
+<details>
+<summary>Visual</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 11 52 23" src="https://user-images.githubusercontent.com/70702631/102769497-0181e980-4383-11eb-91c2-f343aa1ec68b.png">
+</details>
 
 ### Size
 ![Screen Shot 2020-12-21 at 11 59 47](https://user-images.githubusercontent.com/70702631/102770208-098e5900-4384-11eb-8840-7f41e5bfb6a9.png)
+<details>
+<summary>Visual</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 11 59 47" src="https://user-images.githubusercontent.com/70702631/102770208-098e5900-4384-11eb-8840-7f41e5bfb6a9.png">
+</details>
 
 ## Modelling the Data
 ### Preparation
