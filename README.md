@@ -1,5 +1,5 @@
 # Predicting the ROI of Sneakers on StockX.com
-A Data Science Project where I used the sneaker data set of StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers.
+My first Data Science Project where I used the sneaker data set of StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers.
 
 ## Background and Research Goal
 Over the past 10 years flipping shoes (buying new sneakers and reselling the sneakers) is evolved to what is now the sneaker culture. You can think flipping sneakers for profit is silly, but this once niche market has grown to become a 2 billion market and it is projected to reach 6 billion by 2025.
@@ -116,3 +116,68 @@ Model                  | Train Score     | Test Score        | R2 Score         
 Random Forest Regressor| 99.58%          | 96.74%            | 97.45%            | 891.04            | 29.85        
 HistGradientBoosting   | 95.83%          | 94.59%            | 95.05%            | 1478.60           | 38.45      
 MLPRegressor           | 97.52%          | 96.36%            | 96.67%            | 995.34            | 31.55  
+
+According to the modeling results, the Random Forest Regressor preforms best as it has the highest cross-validated accuracy (R2 score) and lowest values for the MSE and RMSE. For the deployment of the model into some sort of web application which could be used by people, the Random Forest Regressor would be prefered. The next section will however also show the results of the Lasso Regressor as they are easier to interpret. 
+
+## Model Predictions
+### Lasso Regressor
+The variables with the highest coefficients are visualized below. For convenience, I also decided to visualize the coefficients per variable to make it easier to interpret.
+
+<details>
+<summary>Variables with Highest Coefficients</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 14 46 28" src="https://user-images.githubusercontent.com/70702631/102783562-65181100-439b-11eb-93e3-92ee39b001eb.png">
+</details>
+
+TEXT
+
+<details>
+<summary>Type of Sneaker</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 14 48 50" src="https://user-images.githubusercontent.com/70702631/102783720-a8727f80-439b-11eb-819c-e9140a939e6d.png">
+</details>
+
+<details>
+<summary>Style of Sneaker</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 14 49 42" src="https://user-images.githubusercontent.com/70702631/102783797-c809a800-439b-11eb-9f4e-6713a610ca79.png">
+</details>
+
+<details>
+<summary>Day of Sale</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 14 50 40" src="https://user-images.githubusercontent.com/70702631/102783976-056e3580-439c-11eb-82e8-545c5c39dc52.png">
+</details>
+
+<details>
+<summary>Week of Sale</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 14 50 50" src="https://user-images.githubusercontent.com/70702631/102784108-32224d00-439c-11eb-821f-9f6f49a29167.png">
+</details>
+
+<details>
+<summary>Month of Sale</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 14 50 57" src="https://user-images.githubusercontent.com/70702631/102784154-45cdb380-439c-11eb-92d7-201ffa501ab1.png">
+</details>
+
+<details>
+<summary>Size of Sneaker</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 14 51 03" src="https://user-images.githubusercontent.com/70702631/102784219-5e3dce00-439c-11eb-9570-872a802d532e.png">
+</details>
+
+<details>
+<summary>Color of Sneaker</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 14 51 26" src="https://user-images.githubusercontent.com/70702631/102784254-6dbd1700-439c-11eb-959f-2c27896b40d8.png">
+</details>
+
+### Random Forest Regressor
+<details>
+<summary>Feature Importance</summary>
+<img width="600" alt="Screen Shot 2020-12-21 at 14 55 47" src="https://user-images.githubusercontent.com/70702631/102784406-a2c96980-439c-11eb-808c-883c4f5c4e08.png">
+</details>
+
+
+## Limitations and Further Deployment
+### Limitations
+* Only 50 different sneakers from the brand Yeezy and Nike Off-White in the dataset.
+* Some sneakers are first generation sneakers and therefore are more expensive.
+* Not including number of sales per day on the StockX Marketplace.
+* Data covers sales from 2017 to 2019, the predictive power of the model will decrease over time.
+* Proposing candidate based on hot features, I'm not able to give a predicted ROI.
+### Further Deployment
+* There is an idea of implementing the Random Forest Regressor model in some sort of user-friendly web application for people to use. Nevertheless, this is something I still need to explore.
