@@ -65,4 +65,4 @@ The following section will visualize some variables to give you an understanding
 ![Screen Shot 2020-12-21 at 11 52 23](https://user-images.githubusercontent.com/70702631/102769497-0181e980-4383-11eb-91c2-f343aa1ec68b.png)
 
 ### Size
-![Screen Shot 2020-12-21 at 11 57 33](https://user-images.githubusercontent.com/70702631/102770059-cc29cb80-4383-11eb-8c65-1d46b7c34d33.png)
+![Screen Shot 2020-12-21 at 11 59 47](https://user-images.githubusercontent.com/70702631/102770208-098e5900-4384-11eb-8840-7f41e5bfb6a9.png)
