@@ -8,7 +8,8 @@ My first Data Science Project where I used a dataset published by StockX in comb
 3. [Exploratory Data Analysis](#Exploratory-Data-Analysis)
 4. [Modelling the Data](#Modelling-the-Data)
 5. [Model Results](#Model-Results)
-6. [Limitations and Further Deployment](#Limitations-and-Further-Deployment)
+6. [Recommendation](#Recommendation)
+7. [Limitations and Further Deployment](#Limitations-and-Further-Deployment)
 
 
 ## Background and Research Goal
@@ -23,7 +24,7 @@ The beautifull ting about this marketplace is that all kind of people can access
 For this project I used a [dataset](CSV_files/StockX-Data-Contest-2019.xlsx) that StockX published as a challenge where people could win 1000 dollar. The data that was given consisted of a random sample of all Off-White x Nike and Yeezy 350 sales between 9/1/2017 and 13/02/2019. In total there were 99956 observations, 27,794 Off-White, and 72,162 Yeezy. To create this sample, they took a random, fixed percentage X of deals on StockX for each colorway, on each day since September 2017. So for each day the Off-White Jordan 1 was on the market, they randomly selected X% of its sale from each day. 
 Table 1 shows which variables were in the dataset.
 
-![Screen Shot 2020-12-21 at 10 47 09](https://user-images.githubusercontent.com/70702631/102763476-ff675d00-4379-11eb-8e18-9722c5043a83.png)
+<img width="615" alt="Screen Shot 2020-12-22 at 15 43 04" src="https://user-images.githubusercontent.com/70702631/102900410-8432a380-446c-11eb-9b8a-0a8a8ffebb75.png">
 
 ###### Table 1: Variables in public StockX Dataset
 
@@ -38,7 +39,7 @@ for sneakername in sneakernames:
     large_sneaker_dict[sneakername] = stockx_.search(sneakername)
 ```
 
-![Screen Shot 2020-12-21 at 11 22 45](https://user-images.githubusercontent.com/70702631/102766737-e57c4900-437e-11eb-9241-d89fe1ff93a9.png)
+<img width="511" alt="Screen Shot 2020-12-22 at 15 43 14" src="https://user-images.githubusercontent.com/70702631/102900439-8c8ade80-446c-11eb-9bb4-048d309a951e.png">
 
 ###### Table 2: Usefull variables for StockX API 
 
