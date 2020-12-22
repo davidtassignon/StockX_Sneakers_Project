@@ -1,5 +1,5 @@
-# Predicting the ROI of Sneakers on StockX.com
-My first Data Science Project where I used a dataset published by StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers. This project was part of my Data Science Immersive bootcahm at General Assembly. I finalized that program with a presentation covering this project. This Read Me will walk you through the project. 
+# Predicting the ROI of Sneakers on StockX.com <img width="254" alt="Screen Shot 2020-12-22 at 15 27 29" src="https://user-images.githubusercontent.com/70702631/102898739-3b79eb00-446a-11eb-9b8f-6ac98db9dcbf.png">
+My first Data Science Project where I used a dataset published by StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers. This project was part of my Data Science Immersive bootcahm at General Assembly. I finalized that program with a presentation covering this project. This README will walk you through the project. 
 
 ## Table of Content
 
@@ -15,7 +15,8 @@ My first Data Science Project where I used a dataset published by StockX in comb
 Over the past 10 years flipping shoes - buying new sneakers and reselling the sneakers - is evolved to what is now the sneaker culture. You can think flipping sneakers for profit is worthless, but this once niche market has become a 2 billion market and it is projected to reach 6 billion by 2025.
 One of the largest sneaker resale platforms is called StockX. It operates like a stock exchange website where users can place a bidding or asking prices, and when there is a match, the deal can come through. As you can imagine, this online marketplace is a Walhalla for data scientists or analaysts as each day 7000 to 10000 deals are made.
 
-The beautifull ting about this marketplace is that all kind of people can access a limited pair of sneakers. So this means that all kind of people can participate on the marketplace and make profit on reselling sneakers. The aim of my project was to identify which features boost the resale price of a pair of sneakers and give you as reseller the highest return on investment.   
+The beautifull ting about this marketplace is that all kind of people can access a limited pair of sneakers. So this means that all kind of people can participate on the marketplace and make profit on reselling sneakers. The aim of my project was to identify which features boost the resale price of a pair of sneakers and give you as reseller the highest return on investment.
+
 
 ## Data Overview
 ### StockX Dataset
@@ -51,6 +52,7 @@ After merging the two dataframe together, I decided to do some extra feature eng
 * Day since Release Date_2: the same variable as "Day since Release Date" but shifted with +29 days to be able to take this time dependence into account in the modelling stage. 
 
 After feature engineering I had 125 variables and 79710 observations. For a closer look into the code used I would like to direct you to [my jupyter notebook](code_notebook.ipynb) section 2.4 and for the data to this [dataset](CSV_files/stockx_df.csv) which consists of all the sales.
+
 
 ## Exploratory Data Analysis
 Before continuing with the EDA and visualizations I subsetted the dataset to only the orders within 1 year of the release date. This gave me the following [subsetted dataset](CSV_files/stockx_df1y.csv) which I used for this project. 
@@ -101,6 +103,7 @@ Looking at Figure 7 it seems that there aren’t very big differences between th
 <img width="600" alt="Screen Shot 2020-12-21 at 11 59 47" src="https://user-images.githubusercontent.com/70702631/102770208-098e5900-4384-11eb-8840-7f41e5bfb6a9.png">
 </details>
 
+
 ## Modelling the Data
 ### Preparation
 Before applying some models, I prepared the data in the following way. The variables that were used for the modelling were: 
@@ -116,14 +119,14 @@ Hereafter I did the following:
 
 ### Modelling
 I fitted the following linear and tree-based models using a cross-validation of 5 resulting in the R2 scores shown in the tables below.
-## Linear-based Models
+#### Linear-based Models
 Model                  | Train Score     | Test Score        | R2 Score          | MSE               | RMSE            
 --------------------   | -------------   | -------------     | -------------     | -------------     | -------------     
 Lasso Regressor *      | 82.87%          | 81.17%            | 82.76%            | 5142.35           | 71.71        
 Linear SVM Regressor * | 82.87%          | 81.17%            | 82.76%            | 5142.35           | 71.71        
 ###### * Hyperparameters tuned by GridSearch
 
-## Tree-based Models
+#### Tree-based Models
 Model                  | Train Score     | Test Score        | R2 Score          | MSE               | RMSE            
 --------------------   | -------------   | -------------     | -------------     | -------------     | -------------     
 Random Forest Regressor| 99.58%          | 96.74%            | 97.45%            | 891.04            | 29.85        
