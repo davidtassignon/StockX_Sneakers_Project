@@ -1,5 +1,5 @@
 # Predicting the ROI of Sneakers on StockX.com
-My first Data Science Project where I used a dataset published by StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers.
+My first Data Science Project where I used a dataset published by StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers. This project was part of my Data Science Immersive bootcahm at General Assembly. I finalized that program with a presentation covering this project. This Read Me will walk you through the project. 
 
 ## Table of Content
 
@@ -134,7 +134,7 @@ According to the modeling results, the Random Forest Regressor preforms best as 
 
 ## Model Results
 ### Lasso Regressor
-The variables with the highest coefficients are visualized below. For convenience, I also decided to visualize the coefficients per variable to make it easier to interpret.
+The variables with the highest coefficients are visualized below. For convenience, I also decided to visualize the coefficients per variable to make it easier to interpret. Positive coefficients of a variable (characteristic) mean that when this variable is included the ROI goes up. When the variable has a negative coefficients the ROI goes down when the variable is included. 
 
 <details>
 <summary>Variables with Highest Coefficients</summary>
@@ -177,11 +177,24 @@ The variables with the highest coefficients are visualized below. For convenienc
 </details>
 
 ### Random Forest Regressor
+The Random Forest Regressor was the best predicting model. This model gives the feature importance as output. The feature importance assigns a score to each variable indicating how usefull they are to predict the ROI. 
 <details>
 <summary>Feature Importance</summary>
 <img width="600" alt="Screen Shot 2020-12-21 at 14 55 47" src="https://user-images.githubusercontent.com/70702631/102784406-a2c96980-439c-11eb-808c-883c4f5c4e08.png">
 </details>
 
+### Recommendation
+Based on the identified features, I looked on StockX.com for sneakers that were worth flipping. One sneaker that, based on the identified features, is worth buying is the "Nike Blazer Low 77 Vintage White Black". This sneaker has the following features boosting the ROI:
+- Blazer
+- Vintage
+- White
+- Release Date: 12/04/2020
+<details>
+<summary>Nike Blazer Low 77 Vintage White Black</summary>
+<img width="400" alt="Screen Shot 2020-12-22 at 15 24 44" src="https://user-images.githubusercontent.com/70702631/102898500-e1792580-4469-11eb-93d6-31bca0104841.png">
+</details>
+
+Unfortunately, I was not able to predict the ROI as therefore I would need to deploy my Random Forest model. However, the Lasso model gave me the sneaker features to keep an eye out for.  
 
 ## Limitations and Further Deployment
 ### Limitations
