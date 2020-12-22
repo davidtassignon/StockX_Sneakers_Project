@@ -52,13 +52,13 @@ After merging the two dataframe together, I decided to do some extra feature eng
 * Colorway: this variable retrieved from the api was used to extract the single colors per sneaker resulting in a variable per color.
 * Day since Release Date_2: the same variable as "Day since Release Date" but shifted with +29 days to be able to take this time dependence into account in the modelling stage. 
 
-After feature engineering I had 125 variables and 79710 observations. For a closer look into the code used I would like to direct you to [my jupyter notebook](code_notebook.ipynb) section 2.4 and for the data to this [dataset](CSV_files/stockx_df.csv) which consists of all the sales.
+After feature engineering I had 125 variables and 79710 observations. For a closer look into the code used I would like to direct you to [my jupyter notebook](notebook_stockx_project.ipynb) section 2.4 and for the data to this [dataset](CSV_files/stockx_df.csv) which consists of all the sales.
 
 
 ## Exploratory Data Analysis
 Before continuing with the EDA and visualizations I subsetted the dataset to only the orders within 1 year of the release date. This gave me the following [subsetted dataset](CSV_files/stockx_df1y.csv) which I used for this project. 
 
-The following section will visualize some variables to give you an understanding of the data that was used for this project. For a closer look into the code used and other variables I direct you to the [my jupyter notebook](code_notebook.ipynb) section 3.
+The following section will visualize some variables to give you an understanding of the data that was used for this project. For a closer look into the code used and other variables I direct you to the [my jupyter notebook](notebook_stockx_project.ipynb) section 3.
 
 ### Brand
 This shows the distribution of the brand variable. As you can see, there are more Yeezy's than Off-White sneakers in the dataset. 
