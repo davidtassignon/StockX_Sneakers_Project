@@ -65,34 +65,37 @@ This shows the distribution of the brand variable. As you can see, there are mor
 </details>
 
 ### ROI per Sneaker name and Type
+Figure 2 shows the average ROI per sneaker name and Figure 3 shows the number of sneaker types and the average ROI per sneaker type. What already can be seen from these visualizations is that the Jordan 1 Retro High, Nike Air Presto, and the Nike Blazer Mid are worth keeping an eye out for. 
 <details>
 <summary>Figure 2</summary>
 <img width="879" alt="Screen Shot 2020-12-21 at 11 37 30" src="https://user-images.githubusercontent.com/70702631/102782405-94c61980-4399-11eb-95b3-3ee5dba7caa3.png">
 </details>
-
 <details>
 <summary>Figure 3</summary>
 <img width="879" alt="Screen Shot 2020-12-21 at 11 43 27" src="https://user-images.githubusercontent.com/70702631/102768642-c7fcae80-4381-11eb-96c8-333f374d88ab.png">
 </details>
 
 ### ROI over Time
+Figure 4 shows how the ROI changes over time before and after the release date of the sneaker. We see that before the release date the ROI is very high, the demand is high and sellers can ask a lot for these not even released pairs. After the release, the ROI drops whereafter it increases a bit. Figure 5 looks a bit closer to this. So what is happening is that before the release date the prices are high as everyone wants to have the first pair of those limited sneakers. The light color indicated the number of sneakers sold on the platform. The darker color shows us that a lot of sneakers are sold in the first week after the release. People are making a quick profit within this first week. Hereafter, the ROI decreases as the market gets saturated. So already advising; do not buy sneakers before the release date as pre-release sales account for the biggest buyer premium. Try to buy those sneakers for the retail price and quickly sell them within the first 7 days. After the first two weeks, try to find sneakers twice the retail price and keep them until somewhere between day 60 and 70 to sell them.
+
 <details>
 <summary>Figure 4</summary>
 <img width="500" alt="Screen Shot 2020-12-21 at 11 56 00" src="https://user-images.githubusercontent.com/70702631/102769850-810fb880-4383-11eb-9477-e541611a0d88.png">
 </details>
-
 <details>
 <summary>Figure 5</summary>
 <img width="879" alt="Screen Shot 2020-12-21 at 11 46 37" src="https://user-images.githubusercontent.com/70702631/102768922-32adea00-4382-11eb-9dcf-3a7bf9baa788.png">
 </details>
 
 ### Daily, Weekly, Monthly difference of ROI
+Figure 6 shows the daily, weekly, and monthly difference of the ROI. As you can see, the number of orders is very equal over the days. However, the darker colors indicate that the ROI is higher on Wednesday, Tuesday, Monday accordingly. When looking at the months, between March and May, and between August and October there are fewer sneakers on the marketplace resulting in a higher ROI. The week figure just gives a closer look per week for people to use. 
 <details>
 <summary>Figure 6</summary>
 <img width="600" alt="Screen Shot 2020-12-21 at 11 52 23" src="https://user-images.githubusercontent.com/70702631/102769497-0181e980-4383-11eb-91c2-f343aa1ec68b.png">
 </details>
 
 ### Size
+Looking at Figure 7 it seems that there aren’t very big differences between the different shoe sizes. However, based on this figure I would suggest buying sneakers with sizes that have a whole size number as it seems that they are higher in demand and slightly higher in ROI. 
 <details>
 <summary>Figure 7</summary>
 <img width="600" alt="Screen Shot 2020-12-21 at 11 59 47" src="https://user-images.githubusercontent.com/70702631/102770208-098e5900-4384-11eb-8840-7f41e5bfb6a9.png">
