@@ -1,5 +1,5 @@
 # Predicting the ROI of Sneakers on StockX.com
-My first Data Science Project where I used the sneaker data set of StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers.
+My first Data Science Project where I used a dataset published by StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers.
 
 ## Table of Content
 
@@ -12,15 +12,14 @@ My first Data Science Project where I used the sneaker data set of StockX in com
 
 
 ## Background and Research Goal
-Over the past 10 years flipping shoes (buying new sneakers and reselling the sneakers) is evolved to what is now the sneaker culture. You can think flipping sneakers for profit is silly, but this once niche market has grown to become a 2 billion market and it is projected to reach 6 billion by 2025.
-One of the largest sneaker resale platforms is called StockX. It operates like a stock exchange website where users can place a bidding or asking prices, and when there is a match, the deal can come through. As you can imagine, this online marketplace is a Walhalla for data scientists or analysts as each day 7000 to 10000 deals are made.
+Over the past 10 years flipping shoes - buying new sneakers and reselling the sneakers - is evolved to what is now the sneaker culture. You can think flipping sneakers for profit is worthless, but this once niche market has become a 2 billion market and it is projected to reach 6 billion by 2025.
+One of the largest sneaker resale platforms is called StockX. It operates like a stock exchange website where users can place a bidding or asking prices, and when there is a match, the deal can come through. As you can imagine, this online marketplace is a Walhalla for data scientists or analaysts as each day 7000 to 10000 deals are made.
 
-The beautifull ting about this new marketplace is that all kind of people can now access a limited pair of sneakers. So this means that all kind of people can also participate on the StockX marketplace and make profit on reselling sneakers. The aim of my project was to identify which features boost the resale price of a pair of sneakers and give you as reseller the highest return on investment.   
+The beautifull ting about this marketplace is that all kind of people can access a limited pair of sneakers. So this means that all kind of people can participate on the marketplace and make profit on reselling sneakers. The aim of my project was to identify which features boost the resale price of a pair of sneakers and give you as reseller the highest return on investment.   
 
 ## Data Overview
 ### StockX Dataset
-For this project I used a dataset that StockX (see CSV_files/StockX-Data-Contest-2019.xlsx) published as a Challenge where people could win 1000 dollar. The data that was given consisted of a random sample of all Off-White x Nike and Yeezy 350 sales between 9/1/2017 and 13/02/2019. In total there were 99956 deals, 27,794 Off-White, and 72,162 Yeezy. To create this sample, they took a random, fixed percentage X of deals on StockX for each colorway, on each day since September 2017.
-So for each day the Off-White Jordan 1 was on the market, they randomly selected X% of its sale from each day. 
+For this project I used a [dataset](CSV_files/StockX-Data-Contest-2019.xlsx) that StockX published as a challenge where people could win 1000 dollar. The data that was given consisted of a random sample of all Off-White x Nike and Yeezy 350 sales between 9/1/2017 and 13/02/2019. In total there were 99956 observations, 27,794 Off-White, and 72,162 Yeezy. To create this sample, they took a random, fixed percentage X of deals on StockX for each colorway, on each day since September 2017. So for each day the Off-White Jordan 1 was on the market, they randomly selected X% of its sale from each day. 
 Table 1 shows which variables were in the dataset.
 
 ![Screen Shot 2020-12-21 at 10 47 09](https://user-images.githubusercontent.com/70702631/102763476-ff675d00-4379-11eb-8e18-9722c5043a83.png)
@@ -28,7 +27,7 @@ Table 1 shows which variables were in the dataset.
 ###### Table 1: Variables in public StockX Dataset
 
 ### StockX Unofficial API
-To get some extra information per sneaker name I decided to use an unofficial StockX API. As shown below, I iterated over each sneaker name that I had in my initial dataset returning me 37 extra variables. After closely investigating each variable, I decided to keep the variables shown in Table 2.
+To get some extra information per sneakername I decided to use an unofficial StockX API. As shown in the code below, I iterated over each sneakername that I had in my initial dataset returning 37 extra variables. After closely investigating each variable, I decided to keep the variables shown in Table 2.
 ```powershell
 from stockxsdk import Stockx
 stockx_ = Stockx()
@@ -44,21 +43,22 @@ for sneakername in sneakernames:
 
 ### Feature Engineering
 After merging the two dataframe together, I decided to do some extra feature engineering. I created the following variables:
-* ROI: the target variable calculated as the difference between the sale and retail price divided by the retail price expressed as a percentage.
+* ROI: the target variable calculated as the difference between the sale- and retail price divided by the retail price expressed as a percentage.
 * Day since Release Date: a continuous variable which represents the number of days the order is made before or after the release date.
 * Within 1 year: a binary variable which represent whether the order is made within 1 year from the release date.
 * Month, Week, Day: some extra seasonal variables extracted from the order date.
-* Colorway: this variable from the api was used to extract the single colors per sneaker resulting in a variable per color.
+* Colorway: this variable retrieved from the api was used to extract the single colors per sneaker resulting in a variable per color.
 * Day since Release Date_2: the same variable as "Day since Release Date" but shifted with +29 days to be able to take this time dependence into account in the modelling stage. 
 
-On top of the variables I already had, this feature engineering gave me a total of 125 variables. 
-For a closer look into the code used to perform this feature engineering I would like to direct you to the "code_notebook.ipynb" section 2.4.
+After feature engineering I had 125 variables and 79710 observations. For a closer look into the code used I would like to direct you to [my jupyter notebook](code_notebook.ipynb) section 2.4 and for the data to this [dataset](CSV_files/stockx_df.csv) which consists of all the sales.
 
 ## Exploratory Data Analysis
-Before continuing with the EDA and corresponding visualizations I subsetted the dataset to all the sales within 1 year. 
+Before continuing with the EDA and visualizations I subsetted the dataset to only the orders within 1 year of the release date. This gave me the following [subsetted dataset](CSV_files/stockx_df1y.csv) which I used for this project. 
 
-The following section will visualize some variables to give you an understanding of the data that was used for this project. For a closer look into the code used and other variables I direct you to the "code_notebook.ipynb" section 3.
+The following section will visualize some variables to give you an understanding of the data that was used for this project. For a closer look into the code used and other variables I direct you to the [my jupyter notebook](code_notebook.ipynb) section 3.
+
 ### Brand
+This shows the distribution of the brand variable. As you can see, there are more Yeezy's than Off-White sneakers in the dataset. 
 <details>
 <summary>Figure 1</summary>
 <img width="300" alt="Screen Shot 2020-12-21 at 11 39 07" src="https://user-images.githubusercontent.com/70702631/102768252-27a68a00-4381-11eb-919d-42e825905d1d.png">
