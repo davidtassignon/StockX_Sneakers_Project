@@ -1,5 +1,5 @@
 # Predicting the ROI of Sneakers on StockX.com <img width="254" alt="Screen Shot 2020-12-22 at 15 27 29" src="https://user-images.githubusercontent.com/70702631/102898739-3b79eb00-446a-11eb-9b8f-6ac98db9dcbf.png">
-My first Data Science Project where I used a dataset published by StockX in combination with an unofficial StockX API to predict the ROI for Yeezy and Off-White Sneakers. This project was part of my Data Science Immersive bootcahm at General Assembly. I finalized that program with a presentation covering this project. This README will walk you through the project. 
+My first Data Science Project where I used a dataset published by StockX in combination with an unofficial StockX API to predict which sneakers boost the ROI for Yeezy and Off-White Sneakers. This project was part of my Data Science Immersive bootcamp at General Assembly. I finalized that program with a presentation covering this project. This README will walk you through the project. 
 
 ## Table of Content
 
